@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astro Starter Kit: Minimal
 
 ```sh
@@ -45,3 +46,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+=======
+# Projet-Stage-2-Agency
+c'est un projet d'integration que je doit faire avec Astro et tailwind css
+>>>>>>> 940495133d6ad222b2e2efa75b39ce2c2febd218

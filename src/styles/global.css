@@ -6,3 +6,6 @@
 .bg-primary-500 {
     background: #2F6B4F;
   }
+  .ph-article-medium {
+    background-image: url('/article-medium.ico');
+}

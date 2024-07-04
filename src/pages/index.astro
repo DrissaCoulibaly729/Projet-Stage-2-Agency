@@ -1,12 +1,13 @@
 ---
-// src/pages/index.astro
-import Header from '../components/Header.astro';
-import Button from '../components/Button.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import PortfolioCard from '../components/PortfolioCard.astro';
-import ClientCard from '../components/ClientCard.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import PortfolioCard from "../components/PortfolioCard.astro";
+import ClientCard from "../components/ClientCard.astro";
+import Footer from "../components/Footer.astro";
+import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,73 +15,171 @@ import Footer from '../components/Footer.astro';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
-    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMJtrj0s5e+Rn5t/e35P0f7dxF+puhHIFl8wHRF"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="bg-primary-500">
     <Header />
     <main class="text-center">
       <section class="bg-primary-500 text-white py-20 relative">
-        <h1 class="text-4xl font-bold mb-4">Create Amazing Digital Products</h1>
-        <p class="text-lg mb-8">We are a professional digital agency that has been established since 2016. We present a variety of digital services that can help you solve problems in your business.</p>
-        <Button />
+        <h1 class="text-4xl font-bold mb-4">
+          Create Amazing Digital Product <br />
+          For Your Business
+        </h1>
+        <p class="text-xs mb-10">
+          We are a professional digital agency that has been established since
+          2016. We present a variety of<br /> digital services that can help you
+          solve problems in your business.
+        </p>
+        <div class="flex justify-center">
+          <Button text="Get Started" icon="fa-solid fa-arrow-right" />
+        </div>
       </section>
       <div class="relative">
-        <div class="absolute top-0 left-0 w-full h-full bg-primary-500" style="clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);"></div>
-        <img src="/img/accueil.jpeg" alt="Image Description" class="w-full h-auto mx-auto rounded-lg shadow-md relative z-10"
-          style="width: 1210px; height: 631px;">
+        <div
+          class="absolute top-0 left-0 w-full h-full bg-primary-500"
+          style="clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);"
+        >
+        </div>
+        <img
+          src="/img/accueil.jpeg"
+          alt="Image Description"
+          class="w-full h-auto mx-auto rounded-lg shadow-md relative z-10"
+          style="width: 1210px; height: 631px;"
+        />
       </div>
-      <section class="bg-white py-20 mt-[-50%] pt-[50%]">
-        <div class="flex justify-center space-x-12 text-gray-700">
+      <section class="bg-white py-16 mt-[-50%] pt-[52%]">
+        <div class="flex justify-center space-x-16 text-gray-700">
           <div class="text-center">
             <p class="text-2xl font-bold">1.2K+</p>
             <p>Happy Clients</p>
           </div>
           <div class="text-center">
-            <p class="text-2xl font-bold">500+</</p>
-            <p>Successful Projects</p>
+            <p class="text-2xl font-bold">1.1+</p>
+            <p>WorldWide Clients</p>
           </div>
           <div class="text-center">
-            <p class="text-2xl font-bold">500K+</p>
-            <p>Lines of Code</p>
+            <p class="text-2xl font-bold">6+</p>
+            <p>Years of Experience</p>
           </div>
           <div class="text-center">
-            <p class="text-2xl font-bold">99%</p>
-            <p>Satisfaction Rate</p>
+            <p class="text-2xl font-bold">12+</p>
+            <p>Award Winners</p>
           </div>
         </div>
       </section>
-      <section class="bg-gray-100 py-20">
-        <h2 class="text-2xl font-bold mb-4">Our Services</h2>
-        <p class="mb-8">We Provide What You Need</p>
+
+      <section class="bg-gray-100 py-12 md:py-16 text-left px-8 md:px-16">
+        <h2 class="mb-2 text-gray-700 text-lg ">Our Services</h2>
+        <p class="text-2xl font-bold mb-8">We Provide What You Need</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <ServiceCard
+            icon="fa-brands fa-figma"
+            title="UI/UX Designer"
+            text="We are ready to make your website more friendly and efficient in the eyes of users."
+          />
+          <ServiceCard
+            icon="fa-solid fa-code"
+            title="Web Development"
+            text="Want to create a website that has many features? We have the answer for you."
+          />
+          <ServiceCard
+            icon="fa-solid fa-code"
+            title="Content Writer"
+            text="We provide interesting content and can attract customers for you."
+          />
+          <ServiceCard
+            icon="fa-solid fa-chart-line"
+            title="Branding"
+            text="Create visual branding with amazing results; you just sit back and relax."
+          />
+          <ServiceCard
+            icon="fa-solid fa-video"
+            title="Editing Video"
+            text="Want to create a website that has many features? We have the answer for you."
+          />
+          <ServiceCard
+            icon="fa-solid fa-pen-nib"
+            title="Illustration"
+            text="Create beautiful illustrations as you need, and make them interesting."
+          />
+        </div>
+      </section>
+
+      <section class="bg-white py-12 md:py-16 text-left px-8 md:px-16">
+        <h2 class="mb-2 text-gray-700 text-lg">Recent Projects</h2>
+        <p class="text-2xl font-bold mb-8">Our Portfolio's</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <PortfolioCard
+            imageSrc="/img/projet1.jpeg"
+            title="Website My Hospital"
+            text="Create a hospital website with patient, doctor, and drug logistics features that help hospital operations."
+          />
+          <PortfolioCard
+            imageSrc="/img/projet2.jpeg"
+            title="Food & Beverages Corp Logo"
+            text="Create a logo for a food & beverage company, with emphasis on aesthetics and user requests."
+          />
+          <PortfolioCard
+            imageSrc="/img/projet3.jpeg"
+            title="Supermarket Mobile Apps"
+            text="Develop mobile applications for supermarkets with buy, auto-pay, and marketplace features."
+          />
+          <!-- Ajoutez d'autres instances de PortfolioCard avec différentes données -->
+        </div>
+      </section>
+
+      <section class="bg-white py-12 md:py-16 text-left px-8 md:px-16">
+        <h2 class="mb-2 text-gray-700 text-lg">What Our Happy Clients Say About Us</h2>
+        <p class="text-2xl font-bold mb-8">Client Reviews</p>
         <div class="flex justify-center space-x-4">
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          <ClientCard
+            titre="Website My Hospital"
+            clientReview="Very nice to work with Bubble Bash, a reliable and responsive team that is very helpful."
+            clientName="Katty Clock"
+            fonction="CEO My Hospital"
+            avatarSrc="/img/client1.png"
+          />
+          <ClientCard
+            titre="Logo F&B Corp"
+            clientReview="Really the best service we've ever gotten, really looking forward to the next project."
+            clientName="John Robert"
+            fonction="CEO F&B Corp"
+            avatarSrc="/img/client2.png"
+          />
+          <ClientCard
+            titre="Supermarket Mobile Apps"
+            clientReview="The best developer team ever, it's a lot of fun working. Maybe work together again on the next project?"
+            clientName="Jane Smith"
+            fonction="CEO Supermarket Mobile Apps"
+            avatarSrc="/img/client3.png"
+          />
+          <!-- Ajoutez d'autres instances de ClientCard avec différentes données -->
         </div>
       </section>
-      <section class="bg-gray-100 py-20">
-        <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
-        <p class="mb-8">Recent Projects</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
+
+      <section class="bg-primary-500 text-white py-16">
+        <h2 class="text-2xl font-bold mb-4">
+          Have a project idea and <br />
+          want to make it come true?
+        </h2>
+        <p class="mb-6">
+          Please contact us and we will discuss about your project, don't forget
+          we are<br />
+          always here for you
+        </p>
+        <div class="flex justify-center">
+          <Button text="Contact Us" icon="fa-solid fa-arrow-right" />
         </div>
-      </section>
-      <section class="bg-gray-100 py-20">
-        <h2 class="text-2xl font-bold mb-4">Client Reviews</h2>
-        <div class="flex justify-center space-x-4">
-          <ClientCard />
-          <ClientCard />
-          <ClientCard />
-        </div>
-      </section>
-      <section class="bg-primary-500 text-white py-20 text-center">
-        <h2 class="text-2xl font-bold mb-4">Get Started with Us</h2>
-        <p class="mb-8">Join our community and start growing your business with our expert services.</p>
-        <Button />
       </section>
     </main>
     <Footer />
   </body>
 </html>
+
+

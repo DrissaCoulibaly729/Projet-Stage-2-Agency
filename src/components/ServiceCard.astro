@@ -1,14 +1,15 @@
 ---
-// src/components/ServiceCard.astro
+const { title, text, icon } = Astro.props;
 ---
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-    <img src="/img/projet1.jpeg" alt="Service Image" class="w-full h-40 object-cover object-center">
-    <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">Service Title</div>
-      <p class="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla, velit sit amet suscipit egestas.
-      </p>
-    </div>
+<div class="w-[289px] h-[258px] p-6 rounded-lg overflow-hidden shadow-lg bg-white">
+  <div class="flex items-center justify-center bg-primary-100 h-24 mb-4 rounded-md">
+    <i class={`text-4xl ${icon} text-green-100`}></i>
+  </div>
+  <div class="text-center">
+    <div class="font-bold text-xl mb-2">{title}</div>
+    <p class="text-gray-700 text-base">
+      {text}
+    </p>
+  </div>
 </div>
-  

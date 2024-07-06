@@ -1,0 +1,51 @@
+---
+// src/components/Header.astro
+---
+
+<header class="">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      
+      <div class="flex items-center space-x-3">
+        <img class="h-10 w-auto" src="/img/logo.svg" alt="Logo" />
+        <span class="text-2xl font-bold text-white">Bubble Bash</span>
+      </div>
+
+      
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white focus:outline-none">
+          <i class="fa fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="/" class="text-white hover:text-gray-200 transition-colors duration-200">Home</a>
+        <a href="/services" class="text-white hover:text-gray-200 transition-colors duration-200">Our Services</a>
+        <a href="/portfolio" class="text-white hover:text-gray-200 transition-colors duration-200">Portfolio</a>
+        <a href="/testimonial" class="text-white hover:text-gray-200 transition-colors duration-200">Testimonial</a>
+        <a href="/contact" class="text-white hover:text-gray-200 transition-colors duration-200">Contact Us</a>
+      </nav>
+    </div>
+   
+    <div id="mobile-menu" class="hidden md:hidden">
+      <nav class="space-y-4">
+        <a href="/" class="block text-white hover:text-gray-200 transition-colors duration-200">Home</a>
+        <a href="/services" class="block text-white hover:text-gray-200 transition-colors duration-200">Our Services</a>
+        <a href="/portfolio" class="block text-white hover:text-gray-200 transition-colors duration-200">Portfolio</a>
+        <a href="/testimonial" class="block text-white hover:text-gray-200 transition-colors duration-200">Testimonial</a>
+        <a href="/contact" class="block text-white hover:text-gray-200 transition-colors duration-200">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</header>
